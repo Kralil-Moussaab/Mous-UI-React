@@ -1,0 +1,42 @@
+hr {
+  background-color: #e73763;
+  height: 1px;
+  border: none;
+}
+.style_titel {
+  color: #e73763;
+  margin-top: 6px;
+}
+.main_group {
+  display: flex;
+  justify-content: space-evenly;
+}
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+}
+.inputStyle {
+  width: 70px;
+  margin: 7px auto;
+  outline: none;
+  color: aliceblue;
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 35px;
+  border: none;
+  background-color: #0c1220;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.inputStyle:focus {
+  box-shadow: rgba(252, 82, 124, 0.25) 0px 0.0625em 0.0625em,
+    rgba(1252, 82, 124, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 174, 193, 0.1) 0px 0px 0px 1px inset;
+}
+.icon {
+  color: #e73763;
+  position: absolute;
+  left: 6px;
+}

@@ -1,0 +1,71 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+aside {
+  width: 250px;
+  height: 100vh;
+  background: #060910;
+  position: fixed;
+  color: #e73763;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+aside ul {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+aside ul .li {
+  text-decoration: none;
+  margin-top: 4px;
+  font-size: 18px;
+  color: #e73763;
+  padding: 17px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+aside ul .li:hover {
+  background-color: #121a2c;
+}
+
+.aside-wrapper {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.logo-text {
+  position: relative;
+  margin-top: 20px;
+}
+.logo-text img {
+  width: 169px;
+}
+
+.sidebar-toggle {
+  display: none;
+  position: absolute;
+  top: 12px;
+  left: 205px;
+  background: #060910;
+  box-shadow: 3px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  padding: 4px 11px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#toggler {
+  display: none;
+}
+
+/* Toggler Functionality */
+input:checked ~ aside {
+  left: -250px;
+}

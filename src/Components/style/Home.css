@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Exo", sans-serif;
+}
+
+.home_area {
+  background: #060910;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 100vh;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgb(252, 82, 124);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  border-radius: 50%;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+.main_home {
+  height: 100vh;
+}
+.bg {
+  position: fixed;
+  height: 40%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.logo {
+  position: fixed;
+  top: 17px;
+  left: 21px;
+  width: 250px;
+}
+
+.main_text {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+.main_text h1 {
+  background: linear-gradient(
+    94.32deg,
+    #ffaec1 7.45%,
+    #ff7293 56.78%,
+    #ff3565 101.22%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 5rem;
+}
+.main_text h1:nth-child(1):after {
+  content: "";
+  animation: abomination1 3s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+@keyframes abomination1 {
+  15% {
+    content: "M";
+  }
+  30% {
+    content: "mo";
+  }
+  45% {
+    content: "mou";
+  }
+  55% {
+    content: "mous";
+  }
+  70% {
+    content: "mous ";
+  }
+  85% {
+    content: "mous u";
+  }
+  100% {
+    content: "mous ui";
+  }
+}
+.main_text h1:nth-child(2):after {
+  content: "";
+  animation: abomination2 3s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+@keyframes abomination2 {
+  0% {
+    content: "o";
+  }
+  6% {
+    content: "op";
+  }
+  13% {
+    content: "ope";
+  }
+  18% {
+    content: "open ";
+  }
+  24% {
+    content: "open-";
+  }
+  30% {
+    content: "open-s";
+  }
+  36% {
+    content: "open-so";
+  }
+  43% {
+    content: "open-sou";
+  }
+  49% {
+    content: "open-sour";
+  }
+  56% {
+    content: "open-sourc";
+  }
+  63% {
+    content: "open-source";
+  }
+  70% {
+    content: "open-source ";
+  }
+  77% {
+    content: "open-source u";
+  }
+  84% {
+    content: "open-source ux";
+  }
+  90% {
+    content: "open-source u";
+  }
+  100% {
+    content: "open-source ui";
+  }
+}
+.main_text h1:nth-child(3):after {
+  content: "";
+  animation: abomination3 3s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 6s;
+}
+@keyframes abomination3 {
+  0% {
+    content: "e";
+  }
+  4% {
+    content: "el";
+  }
+  8% {
+    content: "ele";
+  }
+  12% {
+    content: "elem ";
+  }
+  16% {
+    content: "eleme";
+  }
+  20% {
+    content: "elemem";
+  }
+  24% {
+    content: "eleme";
+  }
+  28% {
+    content: "elemen";
+  }
+  32% {
+    content: "element";
+  }
+  36% {
+    content: "elements";
+  }
+  40% {
+    content: "elements ";
+  }
+  44% {
+    content: "elements f";
+  }
+  48% {
+    content: "elements fo";
+  }
+  52% {
+    content: "elements for";
+  }
+  56% {
+    content: "elements for ";
+  }
+  60% {
+    content: "elements for a";
+  }
+  64% {
+    content: "elements for an";
+  }
+  68% {
+    content: "elements for any";
+  }
+  72% {
+    content: "elements for any ";
+  }
+  76% {
+    content: "elements for any p";
+  }
+  80% {
+    content: "elements for any pr";
+  }
+  84% {
+    content: "elements for any pro";
+  }
+  88% {
+    content: "elements for any proj";
+  }
+  92% {
+    content: "elements for any proje";
+  }
+  96% {
+    content: "elements for any projec";
+  }
+  100% {
+    content: "elements for any project";
+  }
+}
+.mains_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+.main-button {
+  background: #fc527c;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #e73763;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.main-button .get_started .get_start_icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #b91e45;
+  right: 0.3em;
+  top: 7px;
+  transition: all 0.3s;
+}
+
+.main-button:hover .get_start_icon {
+  width: calc(100% - 0.6em);
+}
+
+.main-button .get_start_icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #b91e45;
+}
+
+.main-button:hover .get_start_icon svg {
+  transform: translateX(0.1em);
+}
+
+.main-button:active .get_start_icon {
+  transform: scale(0.95);
+}
