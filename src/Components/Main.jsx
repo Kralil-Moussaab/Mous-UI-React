@@ -98,7 +98,7 @@ export default function Main() {
     if (inputRef.current) {
       const element = inputRef.current;
       const HTML = element.outerHTML.replace(/style="[^"]*"/, "");
-      let inlineStyle = ".input{ \n";
+      let inlineStyle = `.${activePage}_Style{ \n`;
       for (let i = 0; i < element.style.length; i++) {
         const property = element.style[i];
         const value = element.style.getPropertyValue(property);
@@ -162,6 +162,7 @@ export default function Main() {
                 {activePage === "input" && (
                   <Input
                     ref={inputRef}
+                    classNameStyle={`${activePage}_Style`}
                     style={{
                       backgroundColor: bgColor,
                       borderTopLeftRadius: `${borderTLRadius}${px}`,
@@ -185,6 +186,7 @@ export default function Main() {
                 {activePage === "button" && (
                   <Button
                     ref={inputRef}
+                    classNameStyle={`${activePage}_Style`}
                     style={{
                       backgroundColor: bgColor,
                       borderTopLeftRadius: `${borderTLRadius}${px}`,
