@@ -4,6 +4,7 @@ import LeftNavBar from "./LeftNavBar";
 import StyleBar from "./StyleBar";
 import Input from "./Input";
 import Button from "./Button";
+import SelectOption from "./SelectOption";
 
 const Mycontext = createContext();
 export const useMyContext = () => useContext(Mycontext);
@@ -30,7 +31,13 @@ export default function Main() {
   const [paddingRight, setPaddingRight] = useState(null);
   const [paddingBottom, setPaddingBottom] = useState(null);
   const [paddingLeft, setPaddingLeft] = useState(null);
+  const [colorCard, setColorCard] = useState("#0c1220");
+  const [boxShadowColor, setBoxShadowColor] = useState("#000000");
+  const [boxShadowSize, setBoxShadowSize] = useState("none");
 
+  function handleColorCardChange(e) {
+    setColorCard(e.target.value);
+  }
   const px = "px";
   const updateStyle = (e, value) => {
     switch (e) {
@@ -79,6 +86,12 @@ export default function Main() {
       case "paddingLeft":
         setPaddingLeft(value);
         break;
+      case "boxShadowSize":
+        setBoxShadowSize(value);
+        break;
+      case "boxShadowColor":
+        setBoxShadowColor(value);
+        break;
       default:
         break;
     }
@@ -119,7 +132,8 @@ export default function Main() {
     // showCode.current.classList.add("hidden");
     // setshow(false);
   };
-
+  const boxShadow =
+    boxShadowSize === "none" ? "none" : `${boxShadowSize} ${boxShadowColor}`;
   return (
     <Mycontext.Provider
       value={{
@@ -146,16 +160,29 @@ export default function Main() {
         <div className="main_general_style ">
           <div className="main_style">
             <h1 className="title">Design your {activePage}</h1>
-            <div class="card">
+            <div class="card" style={{ backgroundColor: colorCard }}>
               <div class="tools">
-                <div class="circle">
-                  <span class="red box"></span>
+                <div>
+                  {" "}
+                  <div class="circle">
+                    <span class="red box"></span>
+                  </div>
+                  <div class="circle">
+                    <span class="yellow box"></span>
+                  </div>
+                  <div class="circle">
+                    <span class="green box"></span>
+                  </div>
                 </div>
-                <div class="circle">
-                  <span class="yellow box"></span>
-                </div>
-                <div class="circle">
-                  <span class="green box"></span>
+                <div>
+                  <p>Change Background</p>
+                  <input
+                    type="color"
+                    value={colorCard}
+                    onChange={handleColorCardChange}
+                    name=""
+                    id=""
+                  />
                 </div>
               </div>
               <div class="card_content">
@@ -175,11 +202,13 @@ export default function Main() {
                       height: `${height}${px}`,
                       width: `${width}${px}`,
                       fontSize: `${fontSize}${px}`,
+                      color: color,
                       paddingTop: `${paddingTop}${px}`,
                       paddingRight: `${paddingRight}${px}`,
                       paddingBottom: `${paddingBottom}${px}`,
                       paddingLeft: `${paddingLeft}${px}`,
                       cursor: "pointer",
+                      boxShadow: boxShadow,
                     }}
                   />
                 )}
@@ -205,6 +234,33 @@ export default function Main() {
                       paddingBottom: `${paddingBottom}${px}`,
                       paddingLeft: `${paddingLeft}${px}`,
                       cursor: "pointer",
+                      boxShadow: boxShadow,
+                    }}
+                  />
+                )}
+                {activePage === "select" && (
+                  <SelectOption
+                    ref={inputRef}
+                    classNameStyle={`${activePage}_Style`}
+                    style={{
+                      backgroundColor: bgColor,
+                      borderTopLeftRadius: `${borderTLRadius}${px}`,
+                      borderTopRightRadius: `${borderTRRadius}${px}`,
+                      borderBottomLeftRadius: `${borderBLRadius}${px}`,
+                      borderBottomRightRadius: `${borderBRRadius}${px}`,
+                      borderColor: borderColor,
+                      borderStyle: "solid",
+                      borderWidth: `${borderWidth}${px}`,
+                      height: `${height}${px}`,
+                      width: `${width}${px}`,
+                      fontSize: `${fontSize}${px}`,
+                      color: color,
+                      paddingTop: `${paddingTop}${px}`,
+                      paddingRight: `${paddingRight}${px}`,
+                      paddingBottom: `${paddingBottom}${px}`,
+                      paddingLeft: `${paddingLeft}${px}`,
+                      cursor: "pointer",
+                      boxShadow: boxShadow,
                     }}
                   />
                 )}

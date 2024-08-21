@@ -21,6 +21,9 @@ const LeftNavBar = ({ onNavClick }) => {
           <Link onClick={() => onNavClick("button")} className="li">
             Button
           </Link>
+          <Link onClick={() => onNavClick("select")} className="li">
+            Select Option
+          </Link>
         </ul>
       </aside>
     </>

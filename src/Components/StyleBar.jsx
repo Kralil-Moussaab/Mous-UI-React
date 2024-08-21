@@ -6,11 +6,12 @@ import BorderColor from "./BorderColor";
 import BackGroundColor from "./BackGroundColor";
 import FontSizeAndColor from "./FontSizeAndColor";
 import Padding from "./Padding";
+import BoxshadowAndColor from "./BoxshadowAndColor";
 
 export default function StyleBar() {
   return (
     <div className="style_bar">
-      <h3 className="title" style={{ marginBottom: "15px" }}>
+      <h3 className="title" style={{ marginBottom: "8px" }}>
         style Bar
       </h3>
       <hr />
@@ -26,6 +27,7 @@ export default function StyleBar() {
       <hr />
       <Padding />
       <hr />
+      <BoxshadowAndColor />
     </div>
   );
 }

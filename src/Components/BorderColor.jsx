@@ -13,7 +13,7 @@ export default function BorderColor() {
         <div className="group">
           <input
             type="color"
-            className="inputStyle BorderColor"
+            className="inputStyle BackGround"
             style={{ padding: "0px" }}
             onChange={(e) => handleChange(e, "borderColor")}
           />
