@@ -5,6 +5,7 @@ import StyleBar from "./StyleBar";
 import Input from "./Input";
 import Button from "./Button";
 import SelectOption from "./SelectOption";
+import CopyButton from "./CopyButton";
 
 const Mycontext = createContext();
 export const useMyContext = () => useContext(Mycontext);
@@ -14,6 +15,11 @@ export default function Main() {
   const [activePage, setactivePage] = useState("input");
   const handlenavClick = (page) => {
     setactivePage(page);
+    handelHiddenCode();
+  };
+  const handelHiddenCode = () => {
+    showCode.current.classList.add("hidden");
+    setshow(false);
   };
   //for style element
   const [bgColor, setBgColor] = useState("#ffffff");
@@ -129,11 +135,12 @@ export default function Main() {
       showCode.current.classList.remove("hidden");
       setshow(true);
     }
-    // showCode.current.classList.add("hidden");
-    // setshow(false);
   };
   const boxShadow =
     boxShadowSize === "none" ? "none" : `${boxShadowSize} ${boxShadowColor}`;
+  //copy code
+  const copyCode1 = useRef();
+  const copyCode2 = useRef();
   return (
     <Mycontext.Provider
       value={{
@@ -294,10 +301,14 @@ export default function Main() {
                     <div>
                       <p className="title_code">Html Code</p>
                     </div>
+                    <div>
+                      <CopyButton copyRef={copyCode1} />
+                    </div>
                   </div>
                 </div>
                 <div className="code-container">
                   <textarea
+                    ref={copyCode1}
                     className="area"
                     name="code"
                     readOnly
@@ -321,10 +332,14 @@ export default function Main() {
                     <div>
                       <p className="title_code">Css Code</p>
                     </div>
+                    <div>
+                      <CopyButton copyRef={copyCode2} />
+                    </div>
                   </div>
                 </div>
                 <div className="code-container">
                   <textarea
+                    ref={copyCode2}
                     className="area"
                     name="code"
                     readOnly
